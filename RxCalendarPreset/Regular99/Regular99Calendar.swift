@@ -1,6 +1,6 @@
 //
 //  Regular99Calendar.swift
-//  calendar99-preset
+//  RxCalendarPreset
 //
 //  Created by Hai Pham on 23/4/18.
 //  Copyright © 2018 Hai Pham. All rights reserved.

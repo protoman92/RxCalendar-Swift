@@ -1,6 +1,6 @@
 //
 //  MonthSectionView.swift
-//  calendar99
+//  RxCalendar
 //
 //  Created by Hai Pham on 11/4/18.
 //  Copyright © 2018 Hai Pham. All rights reserved.

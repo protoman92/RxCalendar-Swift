@@ -1,6 +1,6 @@
 //
 //  MonthHeader.swift
-//  calendar99
+//  RxCalendar
 //
 //  Created by Hai Pham on 10/4/18.
 //  Copyright © 2018 Hai Pham. All rights reserved.
@@ -18,23 +18,23 @@ public final class RxMonthHeaderView: UIView {
   public typealias Dependency = (ViewModel, Decorator)
 
   fileprivate var backwardImgId: String {
-    return "calendar99_monthHeader_backwardImg"
+    return "rxcalendar_monthHeader_backwardImg"
   }
 
   fileprivate var forwardImgId: String {
-    return "calendar99_monthHeader_forwardImg"
+    return "rxcalendar_monthHeader_forwardImg"
   }
 
   fileprivate var backwardBtnId: String {
-    return "calendar99_monthHeader_backwardBtn"
+    return "rxcalendar_monthHeader_backwardBtn"
   }
 
   fileprivate var forwardBtnId: String {
-    return "calendar99_monthHeader_forwardBtn"
+    return "rxcalendar_monthHeader_forwardBtn"
   }
 
   fileprivate var monthLblId: String {
-    return "calendar99_monthHeader_monthLbl"
+    return "rxcalendar_monthHeader_monthLbl"
   }
 
   @IBOutlet fileprivate weak var backwardImg: UIImageView!

@@ -69,3 +69,8 @@ target 'RxCalendarPreset' do
   use_frameworks!
   allViewPods
 end
+
+target 'RxCalendarLegacy' do
+  use_frameworks!
+  allViewPods
+end

@@ -1,6 +1,6 @@
 //
 //  Regular99Model.swift
-//  calendar99-presetLogic
+//  RxCalendarPresetLogic
 //
 //  Created by Hai Pham on 23/4/18.
 //  Copyright © 2018 Hai Pham. All rights reserved.

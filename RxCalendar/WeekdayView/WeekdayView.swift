@@ -1,6 +1,6 @@
 //
 //  WeekdayView.swift
-//  calendar99
+//  RxCalendar
 //
 //  Created by Hai Pham on 13/4/18.
 //  Copyright © 2018 Hai Pham. All rights reserved.

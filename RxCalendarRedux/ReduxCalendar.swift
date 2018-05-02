@@ -19,7 +19,7 @@ public extension RxCalendarRedux.Calendar {
     case clearAll
 
     fileprivate static var basePath: String {
-      return "calendar99.calendar"
+      return "RxCalendar.calendar"
     }
 
     public static var currentMonthPath: String {
