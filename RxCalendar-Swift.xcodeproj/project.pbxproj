@@ -114,6 +114,7 @@
 		D3D0BECE2099BED2007850B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D0BECB2099BED1007850B7 /* Main.storyboard */; };
 		D3D0BEDC2099C1EC007850B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEDB2099C1EC007850B7 /* AppDelegate.swift */; };
 		D3D0BEDE2099C347007850B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEDD2099C347007850B7 /* ViewController.swift */; };
+		D3E63CB42099E037008EC8C7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3E63CB32099E037008EC8C7 /* README.md */; };
 		DB7B7E36CE5F9BE44A40ED54 /* Pods_RxCalendarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6F215009C01CA55B2D8A13 /* Pods_RxCalendarDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -393,6 +394,7 @@
 		D3D0BECC2099BED1007850B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3D0BEDB2099C1EC007850B7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D0BEDD2099C347007850B7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3E63CB32099E037008EC8C7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D5002797C3DBE18BD3BD3745 /* Pods_RxCalendarRedux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCalendarRedux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D628077DFB4A27090C54C831 /* Pods_RxCalendar_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCalendar_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2B439594A48A46FBB9EDC3 /* Pods-RxCalendarReduxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCalendarReduxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCalendarReduxTests/Pods-RxCalendarReduxTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 		D395F73A20998CF500E5081A = {
 			isa = PBXGroup;
 			children = (
+				D3E63CB32099E037008EC8C7 /* README.md */,
 				4B2162238C0322B848B7DF14 /* Frameworks */,
 				66D480B93292447BF598C780 /* Pods */,
 				D395F74520998CF500E5081A /* Products */,
@@ -1304,6 +1307,7 @@
 			files = (
 				D3D0BE7E2099B680007850B7 /* WeekdayCell.xib in Resources */,
 				D3D0BE782099B680007850B7 /* MonthHeader.xcassets in Resources */,
+				D3E63CB42099E037008EC8C7 /* README.md in Resources */,
 				D3D0BE7A2099B680007850B7 /* MonthHeader.xib in Resources */,
 				D3D0BE852099B680007850B7 /* DateCell.xib in Resources */,
 			);
