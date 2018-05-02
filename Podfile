@@ -74,3 +74,9 @@ target 'RxCalendarLegacy' do
   use_frameworks!
   allViewPods
 end
+
+target 'RxCalendarDemo' do
+  use_frameworks!
+  allViewPods
+  allReduxPods
+end

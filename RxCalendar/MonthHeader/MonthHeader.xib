@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RxMonthHeaderView" customModule="calendar99" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RxMonthHeaderView" customModule="RxCalendar" customModuleProvider="target">
             <connections>
-                <outlet property="backwardBtn" destination="TdI-Fw-CX3" id="X2r-Vb-w8P"/>
-                <outlet property="backwardImg" destination="Aq9-jQ-VlI" id="GZG-uO-3eh"/>
-                <outlet property="forwardBtn" destination="fYs-RI-siZ" id="1pL-yG-IbF"/>
-                <outlet property="forwardImg" destination="DtL-9y-NF5" id="z4c-f6-fSk"/>
-                <outlet property="monthLbl" destination="7GV-XN-NK0" id="I7c-Ss-3OD"/>
+                <outlet property="backwardBtn" destination="TdI-Fw-CX3" id="qO2-Kn-0b5"/>
+                <outlet property="backwardImg" destination="Aq9-jQ-VlI" id="Fmq-YG-4rK"/>
+                <outlet property="forwardBtn" destination="fYs-RI-siZ" id="Rz2-2X-Vbf"/>
+                <outlet property="forwardImg" destination="DtL-9y-NF5" id="upY-T3-DQc"/>
+                <outlet property="monthLbl" destination="7GV-XN-NK0" id="HcD-Sc-gMo"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="gFY-z3-y8F" customClass="RxMonthHeaderView" customModule="calendar99" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="gFY-z3-y8F" customClass="RxMonthHeaderView" customModule="RxCalendar" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
