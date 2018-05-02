@@ -59,3 +59,13 @@ target 'RxCalendarRedux' do
     allTestPods
   end
 end
+
+target 'RxCalendarPresetLogic' do
+  use_frameworks!
+  allLogicPods
+end
+
+target 'RxCalendarPreset' do
+  use_frameworks!
+  allViewPods
+end

@@ -6,8 +6,6 @@
 //  Copyright © 2018 Hai Pham. All rights reserved.
 //
 
-import RxCalendarLogic
-
 /// Redux component grouping.
 public final class RxCalendarRedux {
 
