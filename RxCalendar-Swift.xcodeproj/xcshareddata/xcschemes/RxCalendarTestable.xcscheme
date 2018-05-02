@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0930"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D3D0BE292099B01F007850B7"
+               BuildableName = "RxCalendarTestable.framework"
+               BlueprintName = "RxCalendarTestable"
+               ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D378D7E32099924600040CBA"
+            BuildableName = "RxCalendarLogic.framework"
+            BlueprintName = "RxCalendarLogic"
+            ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D378D7EB2099924700040CBA"
+            BuildableName = "RxCalendarLogicTests.xctest"
+            BlueprintName = "RxCalendarLogicTests"
+            ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D3D0BE052099AC1A007850B7"
+            BuildableName = "RxCalendarRedux.framework"
+            BlueprintName = "RxCalendarRedux"
+            ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D3D0BE0D2099AC1A007850B7"
+            BuildableName = "RxCalendarReduxTests.xctest"
+            BlueprintName = "RxCalendarReduxTests"
+            ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D378D7EB2099924700040CBA"
+               BuildableName = "RxCalendarLogicTests.xctest"
+               BlueprintName = "RxCalendarLogicTests"
+               ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D3D0BE0D2099AC1A007850B7"
+               BuildableName = "RxCalendarReduxTests.xctest"
+               BlueprintName = "RxCalendarReduxTests"
+               ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D3D0BE292099B01F007850B7"
+            BuildableName = "RxCalendarTestable.framework"
+            BlueprintName = "RxCalendarTestable"
+            ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D3D0BE292099B01F007850B7"
+            BuildableName = "RxCalendarTestable.framework"
+            BlueprintName = "RxCalendarTestable"
+            ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D3D0BE292099B01F007850B7"
+            BuildableName = "RxCalendarTestable.framework"
+            BlueprintName = "RxCalendarTestable"
+            ReferencedContainer = "container:RxCalendar-Swift.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

@@ -1,0 +1,14 @@
+osx_image: xcode9.3
+language: objective-c
+xcode_workspace: RxCalendar-Swift.xcworkspace
+xcode_scheme: RxCalendarTestable
+xcode_sdk: iphonesimulator11.2
+
+before_install:
+- gem install cocoapods slather xcpretty
+- pod repo update
+
+script:
+- set -o pipefail && xcodebuild clean test -sdk iphonesimulator -workspace RxCalendar-Swift.xcworkspace -scheme RxCalendarTestable -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
+
+after_success: slather
