@@ -7,7 +7,6 @@
 //
 
 import HMReactiveRedux
-import RxCalendarLogic
 
 // MARK: - Redux calendar.
 public extension RxCalendarRedux.Calendar {

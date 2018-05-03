@@ -6,8 +6,6 @@
 //  Copyright © 2018 Hai Pham. All rights reserved.
 //
 
-import RxCalendarLogic
-
 /// Date cell implementation for calendar view. This is the default cell that
 /// will be used if no custom cells are specified.
 public final class RxDateCell: UICollectionViewCell {

@@ -6,8 +6,6 @@
 //  Copyright © 2018 Hai Pham. All rights reserved.
 //
 
-import RxCalendar
-import RxCalendarPresetLogic
 import UIKit
 
 /// Regular calendar for 99 applications.

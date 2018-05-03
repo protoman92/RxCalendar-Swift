@@ -6,8 +6,6 @@
 //  Copyright © 2018 Hai Pham. All rights reserved.
 //
 
-import RxCalendar
-
 /// Decorator for Regular99 Calendar.
 public protocol RxRegular99CalendarDecoratorType:
   RxMonthHeaderDecoratorType,

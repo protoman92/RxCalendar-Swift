@@ -7,7 +7,6 @@
 //
 
 import InterfaceUtilities
-import RxCalendarLogic
 import UIKit
 
 /// Decorator for month section view.

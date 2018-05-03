@@ -6,6 +6,7 @@
 //  Copyright © 2018 swiften. All rights reserved.
 //
 
+#import <RxCalendarLogic/RxCalendarLogic.h>
 #import <UIKit/UIKit.h>
 
 //! Project version number for RxCalendarPresetLogic.
