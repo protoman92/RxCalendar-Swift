@@ -1,6 +1,7 @@
 # RxCalendar
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CocoaPods](https://img.shields.io/cocoapods/v/RxCalendar.svg)](https://cocoapods.org/pods/RxCalendar)
 [![Build Status](https://travis-ci.org/protoman92/RxCalendar-Swift.svg?branch=master)](https://travis-ci.org/protoman92/RxCalendar-Swift)
 [![Coverage Status](https://coveralls.io/repos/github/protoman92/RxCalendar-Swift/badge.svg?branch=master&dummy=false)](https://coveralls.io/github/protoman92/RxCalendar-Swift?branch=master&dummy=false)
 
