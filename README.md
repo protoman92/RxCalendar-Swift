@@ -57,3 +57,16 @@ Each of these views requires its own **ViewModel** and **Model**, so we must be 
 ## Legacy bridge
 
 - If you find the amount of dependencies to implement too daunting, and have reservations towards reactive programming, check out legacy bridges in **RxCalendarLegacy**.
+
+## Installation
+
+This library uses **Cocoapods** with multiple subspecs, which can be installed like so:
+
+```ruby
+pod 'RxCalendar', subspecs: [
+  'Redux',
+  'Regular99Legacy',
+]
+```
+
+Check out **RxCalendar.podspec** for a list of available subspecs.
