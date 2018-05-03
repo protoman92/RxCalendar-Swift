@@ -81,6 +81,7 @@ public extension RxCalendarLogic {
   public struct Month: Comparable {
     public let month: Int
     public let year: Int
+    private let calendar: Calendar
 
     /// [Hashcode Algorithm]: https://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode
     public var hashValue: Int {
@@ -101,6 +102,7 @@ public extension RxCalendarLogic {
     public init(_ month: Int, _ year: Int) {
       self.month = month
       self.year = year
+      calendar = Calendar.current
     }
 
     public init(_ date: Date) {
@@ -122,7 +124,6 @@ public extension RxCalendarLogic {
     /// - Parameter date: A Date instance.
     /// - Returns: A Bool value.
     public func contains(_ date: Date) -> Bool {
-      let calendar = Calendar.current
       let monthValue = calendar.component(.month, from: date)
       let yearValue = calendar.component(.year, from: date)
       return self.month == monthValue && self.year == yearValue
@@ -133,7 +134,6 @@ public extension RxCalendarLogic {
     /// - Parameter monthOffset: An Int value.
     /// - Returns: A Month instance.
     public func with(monthOffset: Int) -> Month? {
-      let calendar = Calendar.current
       let components = dateComponents()
       var componentOffset = DateComponents()
       componentOffset.setValue(monthOffset, for: .month)
@@ -160,7 +160,6 @@ public extension RxCalendarLogic {
     /// - Parameter weekday: A weekday value.
     /// - Returns: A Set of Date.
     public func datesWithWeekday(_ weekday: Int) -> Set<Date> {
-      let calendar = Calendar.current
       let dateComponents = self.dateComponents()
 
       return calendar.date(from: dateComponents)
@@ -218,13 +217,13 @@ public extension RxCalendarLogic {
     /// de-highlight cells with dates that do not lie within the selected month.
     public fileprivate(set) var isCurrentMonth: Bool
     public fileprivate(set) var isSelected: Bool
+    private let calendar: Calendar
 
     /// This is used for highlighting date selections.
     public fileprivate(set) var highlightPart: RxCalendarLogic.HighlightPart
 
     /// Check if this Day is today.
     public var isToday: Bool {
-      let calendar = Calendar.current
       let calendarComponents: Set<Calendar.Component> = [.day, .month, .year]
       let components = calendar.dateComponents(calendarComponents, from: date)
       let todayComps = calendar.dateComponents(calendarComponents, from: Date())
@@ -237,6 +236,7 @@ public extension RxCalendarLogic {
       isCurrentMonth = false
       isSelected = false
       highlightPart = .none
+      calendar = Calendar.current
     }
 
     /// Copy the current Day, but change its date description.
@@ -350,6 +350,30 @@ public extension RxCalendarLogic {
     public func dateAtIndex(_ index: Int) -> Date? {
       return Util.firstDateWithWeekday(month, firstWeekday)
         .flatMap({calendar.date(byAdding: .day, value: index, to: $0)})
+    }
+    
+    /// Get all dates within the current MonthComp that has a specific weekday.
+    ///
+    /// - Parameter weekday: A weekday value.
+    /// - Returns: A Set of Date.
+    public func datesWithWeekday(_ weekday: Int) -> Set<Date> {
+      var dates = Set<Date>()
+      let dateOffset: Int
+      
+      if firstWeekday > weekday {
+        dateOffset = 7 - (firstWeekday - weekday)
+      } else {
+        dateOffset = weekday - firstWeekday
+      }
+      
+      var currentIndex = dateOffset
+      
+      while currentIndex < dayCount {
+        _ = dateAtIndex(currentIndex).map({dates.insert($0)})
+        currentIndex += Util.weekdayCount
+      }
+      
+      return dates
     }
 
     public static func ==(_ lhs: MonthComp, _ rhs: MonthComp) -> Bool {

@@ -31,13 +31,16 @@ public final class Singleton {
   }
 }
 
-// MARK: - RxRegular99CalendarModelDependency
-extension Singleton: RxRegular99CalendarModelDependency {
-  public var firstWeekday: Int { return 1 }
-  
+// MARK: - RxGridDisplayFunction
+extension Singleton: RxGridDisplayFunction {
   public var weekdayStacks: Int {
     return RxCalendarLogic.Util.defaultWeekdayStacks
   }
+}
+
+// MARK: - RxRegular99CalendarModelDependency
+extension Singleton: RxRegular99CalendarModelDependency {
+  public var firstWeekday: Int { return 1 }
   
   public var initialMonthStream: Single<RxCalendarLogic.Month> {
     return Single.just(RxCalendarLogic.Month(1, 1970))

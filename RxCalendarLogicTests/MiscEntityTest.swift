@@ -107,6 +107,31 @@ public final class MiscEntityTest: RootTest {
       XCTAssertEqual(monthComp1 == monthComp2, shouldEqual)
     }
   }
+  
+  public func test_monthCompDaysWithWeekday_shouldWork() {
+    /// Setup
+    let calendar = Calendar.current
+    let weekdayCount = RxCalendarLogic.Util.weekdayCount
+    let weekdayStacks = RxCalendarLogic.Util.defaultWeekdayStacks
+    let dayCount = weekdayCount * weekdayStacks
+    
+    /// When && Then
+    for firstWeekday in 1...7 {
+      for _ in 0..<iterations! {
+        let month = RxCalendarLogic.Month(Date.random()!)
+        let monthComp = RxCalendarLogic.MonthComp(month, dayCount, firstWeekday)
+        
+        for weekday in 1...7 {
+          let datesWithWeekday = monthComp.datesWithWeekday(weekday)
+          XCTAssertEqual(datesWithWeekday.count, weekdayStacks)
+          
+          for date in datesWithWeekday {
+            XCTAssertEqual(calendar.component(.weekday, from: date), weekday)
+          }
+        }
+      }
+    }
+  }
 
   public func test_hightlightPosition_shouldWorkCorrectly() {
     XCTAssertTrue(RxCalendarLogic.HighlightPart.startAndEnd.contains(.start))

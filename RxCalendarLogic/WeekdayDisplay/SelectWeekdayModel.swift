@@ -11,6 +11,7 @@ import SwiftFP
 
 /// Shared functionalities between the model and its dependency.
 public protocol RxSelectWeekdayModelFunction:
+  RxGridDisplayFunction,
   RxMonthAwareModelFunction,
   RxMultiDaySelectionFunction {}
 
@@ -43,6 +44,13 @@ public extension RxCalendarLogic.SelectWeekday {
       self.init(weekdayModel, dependency)
     }
   }
+}
+
+// MARK: - RxGridDisplayFunction
+extension RxCalendarLogic.SelectWeekday.Model: RxGridDisplayFunction {
+  public var weekdayStacks: Int {
+    return dependency.weekdayStacks
+  }  
 }
 
 // MARK: - RxWeekdayAwareModelFunction

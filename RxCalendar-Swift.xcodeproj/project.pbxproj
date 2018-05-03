@@ -724,10 +724,10 @@
 		D378D80F2099929D00040CBA /* WeekdayDisplay */ = {
 			isa = PBXGroup;
 			children = (
-				D378D8102099929D00040CBA /* WeekdayDisplayModel.swift */,
 				D378D8112099929D00040CBA /* SelectWeekdayModel.swift */,
-				D378D8122099929D00040CBA /* WeekdayDisplayViewModel.swift */,
 				D378D8132099929D00040CBA /* SelectWeekdayViewModel.swift */,
+				D378D8102099929D00040CBA /* WeekdayDisplayModel.swift */,
+				D378D8122099929D00040CBA /* WeekdayDisplayViewModel.swift */,
 			);
 			path = WeekdayDisplay;
 			sourceTree = "<group>";

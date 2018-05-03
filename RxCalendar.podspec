@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Hai Pham' => 'swiften.svc@gmail.com' }
   s.homepage = 'https://github.com/protoman92/RxCalendar-Swift.git'
-  s.source = { :git => 'https://github.com/protoman92/RxCalendar-Swift.git', :tag => '#{s.version}'}
+  s.source = { :git => 'https://github.com/protoman92/RxCalendar-Swift.git', :tag => '#{s.version}' }
   s.dependency 'RxSwift', '~> 4.0'
   s.dependency 'SwiftFP/Main'
 

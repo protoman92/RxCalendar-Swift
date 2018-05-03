@@ -87,6 +87,10 @@ extension SelectableWeekdayTest: RxSelectWeekdayModelDependency {
     return firstWeekdayForTest!
   }
   
+  public var weekdayStacks: Int {
+    return RxCalendarLogic.Util.defaultWeekdayStacks
+  }
+  
   public var allSelectionReceiver: AnyObserver<Set<RxCalendarLogic.Selection>> {
     return allSelectionSb.mapObserver(Try.success)
   }
