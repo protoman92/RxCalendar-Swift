@@ -4,6 +4,8 @@
 [![Build Status](https://travis-ci.org/protoman92/RxCalendar-Swift.svg?branch=master)](https://travis-ci.org/protoman92/RxCalendar-Swift)
 [![Coverage Status](https://coveralls.io/repos/github/protoman92/RxCalendar-Swift/badge.svg?branch=master&dummy=false)](https://coveralls.io/github/protoman92/RxCalendar-Swift?branch=master&dummy=false)
 
+(This is a clone of another repository that I did but no longer have access to, so the commit count does not reflect actual effort).
+
 Almost fully-configurable calendar view for iOS applications that runs entirely on Rx.
 
 <img width="418" alt="screen shot 2018-04-24 at 3 44 19 pm" src="https://user-images.githubusercontent.com/12141908/39176228-851bc97e-47d6-11e8-9ac0-6b65e8ca6d14.png">
