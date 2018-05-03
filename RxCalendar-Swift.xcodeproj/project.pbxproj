@@ -26,6 +26,7 @@
 		D30C01EF209B05F800D43007 /* RxCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D378D7E42099924600040CBA /* RxCalendarLogic.framework */; };
 		D30C01F0209B05F800D43007 /* RxCalendarPreset.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D0BE512099B633007850B7 /* RxCalendarPreset.framework */; };
 		D30C01F1209B05F800D43007 /* RxCalendarPresetLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D0BE3D2099B4CB007850B7 /* RxCalendarPresetLogic.framework */; };
+		D30C0215209B174200D43007 /* RxCalendar.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D30C0214209B174200D43007 /* RxCalendar.podspec */; };
 		D378D7CC209990C200040CBA /* RxCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = D378D7CA209990C200040CBA /* RxCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D378D7D9209990DB00040CBA /* RxCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D378D7C8209990C200040CBA /* RxCalendar.framework */; };
 		D378D7ED2099924700040CBA /* RxCalendarLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D378D7E42099924600040CBA /* RxCalendarLogic.framework */; };
@@ -315,6 +316,7 @@
 		A9342A9E190A295C5F04D3CB /* Pods-RxCalendarLogicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCalendarLogicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCalendarLogicTests/Pods-RxCalendarLogicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B585C0833E91DE8F3FCB2385 /* Pods-RxCalendarPreset.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCalendarPreset.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCalendarPreset/Pods-RxCalendarPreset.debug.xcconfig"; sourceTree = "<group>"; };
 		BA22B7989421BFC4A134CDA8 /* Pods-RxCalendarRedux.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCalendarRedux.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxCalendarRedux/Pods-RxCalendarRedux.debug.xcconfig"; sourceTree = "<group>"; };
+		D30C0214209B174200D43007 /* RxCalendar.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RxCalendar.podspec; sourceTree = "<group>"; };
 		D378D7C8209990C200040CBA /* RxCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D378D7CA209990C200040CBA /* RxCalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCalendar.h; sourceTree = "<group>"; };
 		D378D7CB209990C200040CBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -779,6 +781,7 @@
 			isa = PBXGroup;
 			children = (
 				D3E63CB32099E037008EC8C7 /* README.md */,
+				D30C0214209B174200D43007 /* RxCalendar.podspec */,
 				4B2162238C0322B848B7DF14 /* Frameworks */,
 				66D480B93292447BF598C780 /* Pods */,
 				D395F74520998CF500E5081A /* Products */,
@@ -1359,6 +1362,7 @@
 			files = (
 				D3D0BE7E2099B680007850B7 /* WeekdayCell.xib in Resources */,
 				D3D0BE782099B680007850B7 /* MonthHeader.xcassets in Resources */,
+				D30C0215209B174200D43007 /* RxCalendar.podspec in Resources */,
 				D3E63CB42099E037008EC8C7 /* README.md in Resources */,
 				D3D0BE7A2099B680007850B7 /* MonthHeader.xib in Resources */,
 				D3D0BE852099B680007850B7 /* DateCell.xib in Resources */,

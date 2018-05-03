@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     main.dependency 'RxDataSources'
     main.dependency 'RxCocoa', '~> 4.0'
     main.source_files = '{RxCalendarLogic,RxCalendar}/**/*.{swift}'
-    main.resources = '{RxCalendar}/**/*.{json,png,xib}'
+    main.resources = '{RxCalendar}/**/*.{jpeg,jpg,png,storyboard,xcassets,xib}'
   end
 
   s.subspec 'Redux' do |redux|
