@@ -129,4 +129,4 @@ extension AppDecorator: RxMonthSectionDecoratorType {
   }
 }
 
-extension AppDecorator: RxRegular99CalendarDecoratorType {}
+extension AppDecorator: RxRegularCalendarDecoratorType {}

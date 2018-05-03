@@ -1,13 +1,13 @@
 //
-//  Regular99CalendarDecorator.swift
+//  RegularCalendarDecorator.swift
 //  RxCalendarPreset
 //
 //  Created by Hai Pham on 23/4/18.
 //  Copyright © 2018 Hai Pham. All rights reserved.
 //
 
-/// Decorator for Regular99 Calendar.
-public protocol RxRegular99CalendarDecoratorType:
+/// Decorator for RegularCalendar.
+public protocol RxRegularCalendarDecoratorType:
   RxMonthHeaderDecoratorType,
   RxMonthSectionDecoratorType,
   RxWeekdayViewDecoratorType {}

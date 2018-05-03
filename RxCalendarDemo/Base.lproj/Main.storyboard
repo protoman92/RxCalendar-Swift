@@ -50,7 +50,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afG-2a-vpx">
                                 <rect key="frame" x="15" y="124" width="345" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="REGULAR99">
+                                <state key="normal" title="REGULAR CALENDAR">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -60,7 +60,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIh-Gs-hJz">
                                 <rect key="frame" x="15" y="169" width="345" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="REGULAR99-LEGACY">
+                                <state key="normal" title="REGULAR CALENDAR - LEGACY">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -181,15 +181,15 @@
             </objects>
             <point key="canvasLocation" x="118" y="-5"/>
         </scene>
-        <!--Regular99 Legacy View Controller-->
+        <!--Regular Calendar Legacy View Controller-->
         <scene sceneID="pZa-xv-OQI">
             <objects>
-                <viewController id="wCe-Ud-kDR" customClass="Regular99LegacyViewController" customModule="RxCalendarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wCe-Ud-kDR" customClass="RegularCalendarLegacyViewController" customModule="RxCalendarDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bwJ-9n-UJO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="114-zt-G3L" customClass="RxRegular99Calendar" customModule="RxCalendarPreset">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="114-zt-G3L" customClass="RxRegularCalendar" customModule="RxCalendarPreset">
                                 <rect key="frame" x="15" y="79" width="345" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -204,22 +204,22 @@
                         <viewLayoutGuide key="safeArea" id="hba-P1-IBW"/>
                     </view>
                     <connections>
-                        <outlet property="regular99Calendar" destination="114-zt-G3L" id="5cq-Ad-oRw"/>
+                        <outlet property="regularCalendar" destination="114-zt-G3L" id="5cq-Ad-oRw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jbc-de-kUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-650" y="842"/>
         </scene>
-        <!--Regular99 View Controller-->
+        <!--Regular Calendar View Controller-->
         <scene sceneID="M1Y-al-HTU">
             <objects>
-                <viewController id="xIi-uc-23I" customClass="Regular99ViewController" customModule="RxCalendarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xIi-uc-23I" customClass="RegularCalendarViewController" customModule="RxCalendarDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWh-SB-Eub">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYn-FK-u7a" customClass="RxRegular99Calendar" customModule="RxCalendarPreset">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYn-FK-u7a" customClass="RxRegularCalendar" customModule="RxCalendarPreset">
                                 <rect key="frame" x="15" y="79" width="345" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -234,7 +234,7 @@
                         <viewLayoutGuide key="safeArea" id="is7-1J-b9g"/>
                     </view>
                     <connections>
-                        <outlet property="regular99Calendar" destination="ZYn-FK-u7a" id="YDe-Ma-iB8"/>
+                        <outlet property="regularCalendar" destination="ZYn-FK-u7a" id="YDe-Ma-iB8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYm-TY-UTd" userLabel="First Responder" sceneMemberID="firstResponder"/>

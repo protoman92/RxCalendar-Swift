@@ -89,21 +89,21 @@
 		D3D0BE2E2099B01F007850B7 /* RxCalendarTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D0BE2C2099B01F007850B7 /* RxCalendarTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3D0BE412099B4CB007850B7 /* RxCalendarPresetLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D0BE3F2099B4CB007850B7 /* RxCalendarPresetLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3D0BE492099B4F4007850B7 /* PresetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE452099B4F4007850B7 /* PresetEntry.swift */; };
-		D3D0BE4A2099B4F4007850B7 /* Regular99ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE472099B4F4007850B7 /* Regular99ViewModel.swift */; };
-		D3D0BE4B2099B4F4007850B7 /* Regular99Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE482099B4F4007850B7 /* Regular99Model.swift */; };
+		D3D0BE4A2099B4F4007850B7 /* RegularCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE472099B4F4007850B7 /* RegularCalendarViewModel.swift */; };
+		D3D0BE4B2099B4F4007850B7 /* RegularCalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE482099B4F4007850B7 /* RegularCalendarModel.swift */; };
 		D3D0BE552099B633007850B7 /* RxCalendarPreset.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D0BE532099B633007850B7 /* RxCalendarPreset.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3D0BE5C2099B65D007850B7 /* Regular99CalendarDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE5A2099B65D007850B7 /* Regular99CalendarDecorator.swift */; };
-		D3D0BE5D2099B65D007850B7 /* Regular99Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE5B2099B65D007850B7 /* Regular99Calendar.swift */; };
+		D3D0BE5C2099B65D007850B7 /* RegularCalendarDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE5A2099B65D007850B7 /* RegularCalendarDecorator.swift */; };
+		D3D0BE5D2099B65D007850B7 /* RegularCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BE5B2099B65D007850B7 /* RegularCalendar.swift */; };
 		D3D0BE782099B680007850B7 /* MonthHeader.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3D0BE602099B67F007850B7 /* MonthHeader.xcassets */; };
 		D3D0BE7A2099B680007850B7 /* MonthHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D0BE622099B67F007850B7 /* MonthHeader.xib */; };
 		D3D0BE7E2099B680007850B7 /* WeekdayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D0BE672099B67F007850B7 /* WeekdayCell.xib */; };
 		D3D0BE852099B680007850B7 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D0BE702099B67F007850B7 /* DateCell.xib */; };
 		D3D0BE9F2099BCCA007850B7 /* RxCalendarLegacy.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D0BE9D2099BCCA007850B7 /* RxCalendarLegacy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3D0BEA72099BCF2007850B7 /* Regular99Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEA42099BCF2007850B7 /* Regular99Delegate.swift */; };
-		D3D0BEA82099BCF2007850B7 /* Regular99DelegateBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEA52099BCF2007850B7 /* Regular99DelegateBridge.swift */; };
+		D3D0BEA72099BCF2007850B7 /* RegularCalendarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEA42099BCF2007850B7 /* RegularCalendarDelegate.swift */; };
+		D3D0BEA82099BCF2007850B7 /* RegularCalendarDelegateBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEA52099BCF2007850B7 /* RegularCalendarDelegateBridge.swift */; };
 		D3D0BEA92099BCF2007850B7 /* LegacyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEA62099BCF2007850B7 /* LegacyEntry.swift */; };
-		D3D0BEC42099BEAA007850B7 /* Regular99ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEC02099BEAA007850B7 /* Regular99ViewController.swift */; };
-		D3D0BEC52099BEAA007850B7 /* Regular99LegacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEC12099BEAA007850B7 /* Regular99LegacyViewController.swift */; };
+		D3D0BEC42099BEAA007850B7 /* RegularCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEC02099BEAA007850B7 /* RegularCalendarViewController.swift */; };
+		D3D0BEC52099BEAA007850B7 /* RegularCalendarLegacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEC12099BEAA007850B7 /* RegularCalendarLegacyViewController.swift */; };
 		D3D0BEC62099BEAA007850B7 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEC22099BEAA007850B7 /* Decorator.swift */; };
 		D3D0BEC72099BEAA007850B7 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BEC32099BEAA007850B7 /* Singleton.swift */; };
 		D3D0BECD2099BED2007850B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D0BEC92099BED1007850B7 /* LaunchScreen.storyboard */; };
@@ -392,13 +392,13 @@
 		D3D0BE3F2099B4CB007850B7 /* RxCalendarPresetLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCalendarPresetLogic.h; sourceTree = "<group>"; };
 		D3D0BE402099B4CB007850B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3D0BE452099B4F4007850B7 /* PresetEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetEntry.swift; sourceTree = "<group>"; };
-		D3D0BE472099B4F4007850B7 /* Regular99ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular99ViewModel.swift; sourceTree = "<group>"; };
-		D3D0BE482099B4F4007850B7 /* Regular99Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular99Model.swift; sourceTree = "<group>"; };
+		D3D0BE472099B4F4007850B7 /* RegularCalendarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularCalendarViewModel.swift; sourceTree = "<group>"; };
+		D3D0BE482099B4F4007850B7 /* RegularCalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularCalendarModel.swift; sourceTree = "<group>"; };
 		D3D0BE512099B633007850B7 /* RxCalendarPreset.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCalendarPreset.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D0BE532099B633007850B7 /* RxCalendarPreset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCalendarPreset.h; sourceTree = "<group>"; };
 		D3D0BE542099B633007850B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3D0BE5A2099B65D007850B7 /* Regular99CalendarDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular99CalendarDecorator.swift; sourceTree = "<group>"; };
-		D3D0BE5B2099B65D007850B7 /* Regular99Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular99Calendar.swift; sourceTree = "<group>"; };
+		D3D0BE5A2099B65D007850B7 /* RegularCalendarDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularCalendarDecorator.swift; sourceTree = "<group>"; };
+		D3D0BE5B2099B65D007850B7 /* RegularCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularCalendar.swift; sourceTree = "<group>"; };
 		D3D0BE5F2099B67F007850B7 /* MonthHeaderDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeaderDecorator.swift; sourceTree = "<group>"; };
 		D3D0BE602099B67F007850B7 /* MonthHeader.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MonthHeader.xcassets; sourceTree = "<group>"; };
 		D3D0BE612099B67F007850B7 /* MonthHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeader.swift; sourceTree = "<group>"; };
@@ -421,13 +421,13 @@
 		D3D0BE9B2099BCC9007850B7 /* RxCalendarLegacy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCalendarLegacy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D0BE9D2099BCCA007850B7 /* RxCalendarLegacy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxCalendarLegacy.h; sourceTree = "<group>"; };
 		D3D0BE9E2099BCCA007850B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3D0BEA42099BCF2007850B7 /* Regular99Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular99Delegate.swift; sourceTree = "<group>"; };
-		D3D0BEA52099BCF2007850B7 /* Regular99DelegateBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular99DelegateBridge.swift; sourceTree = "<group>"; };
+		D3D0BEA42099BCF2007850B7 /* RegularCalendarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularCalendarDelegate.swift; sourceTree = "<group>"; };
+		D3D0BEA52099BCF2007850B7 /* RegularCalendarDelegateBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularCalendarDelegateBridge.swift; sourceTree = "<group>"; };
 		D3D0BEA62099BCF2007850B7 /* LegacyEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyEntry.swift; sourceTree = "<group>"; };
 		D3D0BEAE2099BE63007850B7 /* RxCalendarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCalendarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D0BEBC2099BE65007850B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3D0BEC02099BEAA007850B7 /* Regular99ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular99ViewController.swift; sourceTree = "<group>"; };
-		D3D0BEC12099BEAA007850B7 /* Regular99LegacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regular99LegacyViewController.swift; sourceTree = "<group>"; };
+		D3D0BEC02099BEAA007850B7 /* RegularCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularCalendarViewController.swift; sourceTree = "<group>"; };
+		D3D0BEC12099BEAA007850B7 /* RegularCalendarLegacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularCalendarLegacyViewController.swift; sourceTree = "<group>"; };
 		D3D0BEC22099BEAA007850B7 /* Decorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		D3D0BEC32099BEAA007850B7 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		D3D0BECA2099BED1007850B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -853,37 +853,37 @@
 				D3D0BE3F2099B4CB007850B7 /* RxCalendarPresetLogic.h */,
 				D3D0BE402099B4CB007850B7 /* Info.plist */,
 				D3D0BE452099B4F4007850B7 /* PresetEntry.swift */,
-				D3D0BE462099B4F4007850B7 /* Regular99 */,
+				D3D0BE462099B4F4007850B7 /* RegularCalendar */,
 			);
 			path = RxCalendarPresetLogic;
 			sourceTree = "<group>";
 		};
-		D3D0BE462099B4F4007850B7 /* Regular99 */ = {
+		D3D0BE462099B4F4007850B7 /* RegularCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				D3D0BE472099B4F4007850B7 /* Regular99ViewModel.swift */,
-				D3D0BE482099B4F4007850B7 /* Regular99Model.swift */,
+				D3D0BE472099B4F4007850B7 /* RegularCalendarViewModel.swift */,
+				D3D0BE482099B4F4007850B7 /* RegularCalendarModel.swift */,
 			);
-			path = Regular99;
+			path = RegularCalendar;
 			sourceTree = "<group>";
 		};
 		D3D0BE522099B633007850B7 /* RxCalendarPreset */ = {
 			isa = PBXGroup;
 			children = (
-				D3D0BE592099B65D007850B7 /* Regular99 */,
+				D3D0BE592099B65D007850B7 /* RegularCalendar */,
 				D3D0BE532099B633007850B7 /* RxCalendarPreset.h */,
 				D3D0BE542099B633007850B7 /* Info.plist */,
 			);
 			path = RxCalendarPreset;
 			sourceTree = "<group>";
 		};
-		D3D0BE592099B65D007850B7 /* Regular99 */ = {
+		D3D0BE592099B65D007850B7 /* RegularCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				D3D0BE5A2099B65D007850B7 /* Regular99CalendarDecorator.swift */,
-				D3D0BE5B2099B65D007850B7 /* Regular99Calendar.swift */,
+				D3D0BE5A2099B65D007850B7 /* RegularCalendarDecorator.swift */,
+				D3D0BE5B2099B65D007850B7 /* RegularCalendar.swift */,
 			);
-			path = Regular99;
+			path = RegularCalendar;
 			sourceTree = "<group>";
 		};
 		D3D0BE5E2099B67F007850B7 /* MonthHeader */ = {
@@ -953,18 +953,18 @@
 				D3D0BE9D2099BCCA007850B7 /* RxCalendarLegacy.h */,
 				D3D0BE9E2099BCCA007850B7 /* Info.plist */,
 				D3D0BEA62099BCF2007850B7 /* LegacyEntry.swift */,
-				D3D0BEA32099BCF2007850B7 /* Regular99 */,
+				D3D0BEA32099BCF2007850B7 /* RegularCalendar */,
 			);
 			path = RxCalendarLegacy;
 			sourceTree = "<group>";
 		};
-		D3D0BEA32099BCF2007850B7 /* Regular99 */ = {
+		D3D0BEA32099BCF2007850B7 /* RegularCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				D3D0BEA42099BCF2007850B7 /* Regular99Delegate.swift */,
-				D3D0BEA52099BCF2007850B7 /* Regular99DelegateBridge.swift */,
+				D3D0BEA42099BCF2007850B7 /* RegularCalendarDelegate.swift */,
+				D3D0BEA52099BCF2007850B7 /* RegularCalendarDelegateBridge.swift */,
 			);
-			path = Regular99;
+			path = RegularCalendar;
 			sourceTree = "<group>";
 		};
 		D3D0BEAF2099BE63007850B7 /* RxCalendarDemo */ = {
@@ -973,8 +973,8 @@
 				D3D0BEBC2099BE65007850B7 /* Info.plist */,
 				D3D0BEDB2099C1EC007850B7 /* AppDelegate.swift */,
 				D3D0BEC22099BEAA007850B7 /* Decorator.swift */,
-				D3D0BEC12099BEAA007850B7 /* Regular99LegacyViewController.swift */,
-				D3D0BEC02099BEAA007850B7 /* Regular99ViewController.swift */,
+				D3D0BEC12099BEAA007850B7 /* RegularCalendarLegacyViewController.swift */,
+				D3D0BEC02099BEAA007850B7 /* RegularCalendarViewController.swift */,
 				D3D0BEC32099BEAA007850B7 /* Singleton.swift */,
 				D3D0BEDD2099C347007850B7 /* ViewController.swift */,
 				D3D0BEC92099BED1007850B7 /* LaunchScreen.storyboard */,
@@ -1870,9 +1870,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D0BE4B2099B4F4007850B7 /* Regular99Model.swift in Sources */,
+				D3D0BE4B2099B4F4007850B7 /* RegularCalendarModel.swift in Sources */,
 				D3D0BE492099B4F4007850B7 /* PresetEntry.swift in Sources */,
-				D3D0BE4A2099B4F4007850B7 /* Regular99ViewModel.swift in Sources */,
+				D3D0BE4A2099B4F4007850B7 /* RegularCalendarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1880,8 +1880,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D0BE5D2099B65D007850B7 /* Regular99Calendar.swift in Sources */,
-				D3D0BE5C2099B65D007850B7 /* Regular99CalendarDecorator.swift in Sources */,
+				D3D0BE5D2099B65D007850B7 /* RegularCalendar.swift in Sources */,
+				D3D0BE5C2099B65D007850B7 /* RegularCalendarDecorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1890,8 +1890,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D0BEA92099BCF2007850B7 /* LegacyEntry.swift in Sources */,
-				D3D0BEA82099BCF2007850B7 /* Regular99DelegateBridge.swift in Sources */,
-				D3D0BEA72099BCF2007850B7 /* Regular99Delegate.swift in Sources */,
+				D3D0BEA82099BCF2007850B7 /* RegularCalendarDelegateBridge.swift in Sources */,
+				D3D0BEA72099BCF2007850B7 /* RegularCalendarDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1900,9 +1900,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D0BEDE2099C347007850B7 /* ViewController.swift in Sources */,
-				D3D0BEC52099BEAA007850B7 /* Regular99LegacyViewController.swift in Sources */,
+				D3D0BEC52099BEAA007850B7 /* RegularCalendarLegacyViewController.swift in Sources */,
 				D3D0BEC72099BEAA007850B7 /* Singleton.swift in Sources */,
-				D3D0BEC42099BEAA007850B7 /* Regular99ViewController.swift in Sources */,
+				D3D0BEC42099BEAA007850B7 /* RegularCalendarViewController.swift in Sources */,
 				D3D0BEDC2099C1EC007850B7 /* AppDelegate.swift in Sources */,
 				D3D0BEC62099BEAA007850B7 /* Decorator.swift in Sources */,
 			);
@@ -2151,7 +2151,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxCalendarLogic/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2180,7 +2180,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxCalendarLogic/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2371,7 +2371,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxCalendarRedux/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2400,7 +2400,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxCalendarRedux/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2469,7 +2469,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxCalendarTestable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2495,7 +2495,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxCalendarTestable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2523,7 +2523,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxCalendarPresetLogic/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2552,7 +2552,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxCalendarPresetLogic/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

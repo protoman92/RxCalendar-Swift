@@ -9,6 +9,6 @@
 /// Entries for legacy bridges.
 public final class RxCalendarLegacy {
 
-  /// Legacy bridges for Regular99 calendar preset.
-  public final class Regular99 {}
+  /// Legacy bridges for RegularCalendar preset.
+  public final class RegularCalendar {}
 }

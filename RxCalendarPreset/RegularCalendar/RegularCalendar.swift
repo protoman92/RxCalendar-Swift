@@ -1,5 +1,5 @@
 //
-//  Regular99Calendar.swift
+//  RegularCalendar.swift
 //  RxCalendarPreset
 //
 //  Created by Hai Pham on 23/4/18.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-/// Regular calendar for 99 applications.
-public final class RxRegular99Calendar: UIView {
-  public typealias Decorator = RxRegular99CalendarDecoratorType
-  public typealias ViewModel = RxRegular99CalendarViewModelType
+/// Regular calendar implementation.
+public final class RxRegularCalendar: UIView {
+  public typealias Decorator = RxRegularCalendarDecoratorType
+  public typealias ViewModel = RxRegularCalendarViewModelType
   public typealias Dependency = (ViewModel, Decorator)
 
   private var monthHeaderId: String {
-    return "regular99_monthHeader"
+    return "regularCalendar_monthHeader"
   }
 
   private var weekdayViewId: String {
-    return "regular99_weekdayView"
+    return "regularCalendar_weekdayView"
   }
 
   private var monthSectionId: String {
-    return "regular99_monthSection"
+    return "regularCalendar_monthSection"
   }
 
   required public init?(coder aDecoder: NSCoder) {
@@ -126,7 +126,7 @@ public final class RxRegular99Calendar: UIView {
 }
 
 // MARK: - Dependencies
-public extension RxRegular99Calendar {
+public extension RxRegularCalendar {
   public var dependency: Dependency? {
     get { return nil }
     set { didSetDependency(newValue) }

@@ -1,5 +1,5 @@
 //
-//  Regular99Model.swift
+//  RegularCalendarModel.swift
 //  RxCalendarPresetLogic
 //
 //  Created by Hai Pham on 23/4/18.
@@ -9,22 +9,22 @@
 import RxSwift
 import SwiftFP
 
-/// Dependency for Regular99 preset model.
-public protocol RxRegular99CalendarModelDependency:
+/// Dependency for RegularCalendar preset model.
+public protocol RxRegularCalendarModelDependency:
   RxMonthHeaderModelDependency,
   RxMonthSectionModelDependency,
   RxSelectWeekdayModelDependency {}
 
-/// Model for Regular99 preset.
-public protocol RxRegular99CalendarModelType:
+/// Model for RegularCalendar preset.
+public protocol RxRegularCalendarModelType:
   RxMonthHeaderModelType,
   RxMonthSectionModelType,
   RxSelectWeekdayModelType {}
 
 // MARK: - Model.
-public extension RxCalendarPreset.Regular99 {
+public extension RxCalendarPreset.RegularCalendar {
 
-  /// Model implementation for Regular99 preset.
+  /// Model implementation for RegularCalendar preset.
   public final class Model {
     fileprivate let monthHeaderModel: RxMonthHeaderModelType
     fileprivate let monthSectionModel: RxMonthSectionModelType
@@ -38,7 +38,7 @@ public extension RxCalendarPreset.Regular99 {
       self.selectableWdModel = selectableWdModel
     }
 
-    convenience public init(_ dependency: RxRegular99CalendarModelDependency) {
+    convenience public init(_ dependency: RxRegularCalendarModelDependency) {
       let monthHeaderModel = RxCalendarLogic.MonthHeader.Model(dependency)
       let monthSectionModel = RxCalendarLogic.MonthSection.Model(dependency)
       let selectableWdModel = RxCalendarLogic.SelectWeekday.Model(dependency)
@@ -48,28 +48,28 @@ public extension RxCalendarPreset.Regular99 {
 }
 
 // MARK: - RxGridDisplayFunction
-extension RxCalendarPreset.Regular99.Model: RxGridDisplayFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxGridDisplayFunction {
   public var weekdayStacks: Int {
     return monthSectionModel.weekdayStacks
   }
 }
 
 // MARK: - RxMonthAwareModelFunction
-extension RxCalendarPreset.Regular99.Model: RxMonthAwareModelFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxMonthAwareModelFunction {
   public var currentMonthStream: Observable<RxCalendarLogic.Month> {
     return monthSectionModel.currentMonthStream
   }
 }
 
 // MARK: - RxMonthControlFunction
-extension RxCalendarPreset.Regular99.Model: RxMonthControlFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxMonthControlFunction {
   public var currentMonthReceiver: AnyObserver<RxCalendarLogic.Month> {
     return monthSectionModel.currentMonthReceiver
   }
 }
 
 // MARK: - RxMonthControlModelFunction
-extension RxCalendarPreset.Regular99.Model: RxMonthControlModelFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxMonthControlModelFunction {
   public var initialMonthStream: PrimitiveSequence<SingleTrait, RxCalendarLogic.Month> {
     return monthSectionModel.initialMonthStream
   }
@@ -84,21 +84,21 @@ extension RxCalendarPreset.Regular99.Model: RxMonthControlModelFunction {
 }
 
 // MARK: - RxSelectHighlightFunction
-extension RxCalendarPreset.Regular99.Model: RxSelectHighlightFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxSelectHighlightFunction {
   public func highlightPart(_ date: Date) -> RxCalendarLogic.HighlightPart {
     return monthSectionModel.highlightPart(date)
   }
 }
 
 // MARK: - RxMonthHeaderModelFunction
-extension RxCalendarPreset.Regular99.Model: RxMonthHeaderModelFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxMonthHeaderModelFunction {
   public func formatMonthDescription(_ month: RxCalendarLogic.Month) -> String {
     return monthHeaderModel.formatMonthDescription(month)
   }
 }
 
 // MARK: - RxMultiDaySelectionFunction
-extension RxCalendarPreset.Regular99.Model: RxMultiDaySelectionFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxMultiDaySelectionFunction {
   public var allSelectionReceiver: AnyObserver<Set<RxCalendarLogic.Selection>> {
     return monthSectionModel.allSelectionReceiver
   }
@@ -109,14 +109,14 @@ extension RxCalendarPreset.Regular99.Model: RxMultiDaySelectionFunction {
 }
 
 // MARK: - RxSingleDaySelectionFunction
-extension RxCalendarPreset.Regular99.Model: RxSingleDaySelectionFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxSingleDaySelectionFunction {
   public func isDateSelected(_ date: Date) -> Bool {
     return monthSectionModel.isDateSelected(date)
   }
 }
 
 // MARK: - RxMultiMonthGridSelectionCalculator
-extension RxCalendarPreset.Regular99.Model: RxMultiMonthGridSelectionCalculator {
+extension RxCalendarPreset.RegularCalendar.Model: RxMultiMonthGridSelectionCalculator {
   public func gridSelectionChanges(_ monthComps: [RxCalendarLogic.MonthComp],
                                    _ currentMonth: RxCalendarLogic.Month,
                                    _ prev: Set<RxCalendarLogic.Selection>,
@@ -129,26 +129,26 @@ extension RxCalendarPreset.Regular99.Model: RxMultiMonthGridSelectionCalculator 
 }
 
 // MARK: - RxWeekdayAwareModelFunction
-extension RxCalendarPreset.Regular99.Model: RxWeekdayAwareModelFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxWeekdayAwareModelFunction {
   public var firstWeekday: Int {
     return monthSectionModel.firstWeekday
   }
 }
 
 // MARK: - RxWeekdayDisplayModelFunction
-extension RxCalendarPreset.Regular99.Model: RxWeekdayDisplayModelFunction {
+extension RxCalendarPreset.RegularCalendar.Model: RxWeekdayDisplayModelFunction {
   public func weekdayDescription(_ weekday: Int) -> String {
     return selectableWdModel.weekdayDescription(weekday)
   }
 }
 
 // MARK: - RxMonthSectionModelDependency
-extension RxCalendarPreset.Regular99.Model: RxMonthSectionModelDependency {
+extension RxCalendarPreset.RegularCalendar.Model: RxMonthSectionModelDependency {
   public func dayFromFirstDate(_ month: RxCalendarLogic.Month,
                                _ firstDateOffset: Int) -> RxCalendarLogic.Day? {
     return monthSectionModel.dayFromFirstDate(month, firstDateOffset)
   }
 }
 
-// MARK: - RxRegular99CalendarModelType
-extension RxCalendarPreset.Regular99.Model: RxRegular99CalendarModelType {}
+// MARK: - RxRegularCalendarModelType
+extension RxCalendarPreset.RegularCalendar.Model: RxRegularCalendarModelType {}

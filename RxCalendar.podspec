@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.name = "RxCalendar"
   s.summary = "Rx-driven calendar view for iOS/OSX applications."
   s.requires_arc = true
-  s.version = "1.0.0"
+  s.version = "1.0.1"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author = { "Hai Pham" => "swiften.svc@gmail.com" }
   s.homepage = "https://github.com/protoman92/RxCalendar-Swift.git"
@@ -25,17 +25,17 @@ Pod::Spec.new do |s|
     redux.source_files = "{RxCalendarLogic,RxCalendarRedux}/**/*.{swift}"
   end
 
-  s.subspec "Regular99Preset" do |regular99|
-    regular99.dependency "RxCalendar/Main"
-    regular99.source_files = 
+  s.subspec "RegularCalendarPreset" do |regular|
+    regular.dependency "RxCalendar/Main"
+    regular.source_files =
       "{RxCalendarPresetLogic,RxCalendarPreset}/**/*Entry.{swift}",
-      "{RxCalendarPresetLogic,RxCalendarPreset}/Regular99/*.{swift}"
+      "{RxCalendarPresetLogic,RxCalendarPreset}/RegularCalendar/*.{swift}"
   end
 
-  s.subspec "Regular99Legacy" do |r99legacy|
-    r99legacy.dependency "RxCalendar/Regular99Preset"
-    r99legacy.source_files =
+  s.subspec "RegularCalendarLegacy" do |rcLegacy|
+    rcLegacy.dependency "RxCalendar/RegularCalendarPreset"
+    rcLegacy.source_files =
       "{RxCalendarLegacy}/**/*Entry.{swift}",
-      "{RxCalendarLegacy}/Regular99/*.{swift}"
+      "{RxCalendarLegacy}/RegularCalendar/*.{swift}"
   end
 end

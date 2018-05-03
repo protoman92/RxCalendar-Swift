@@ -38,8 +38,8 @@ extension Singleton: RxGridDisplayFunction {
   }
 }
 
-// MARK: - RxRegular99CalendarModelDependency
-extension Singleton: RxRegular99CalendarModelDependency {
+// MARK: - RxRegularCalendarModelDependency
+extension Singleton: RxRegularCalendarModelDependency {
   public var firstWeekday: Int { return 1 }
   
   public var initialMonthStream: Single<RxCalendarLogic.Month> {

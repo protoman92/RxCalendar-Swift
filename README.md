@@ -65,7 +65,7 @@ This library uses **Cocoapods** with multiple subspecs, which can be installed l
 ```ruby
 pod 'RxCalendar', subspecs: [
   'Redux',
-  'Regular99Legacy',
+  'RegularCalendarLegacy',
 ]
 ```
 

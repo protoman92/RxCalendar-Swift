@@ -1,5 +1,5 @@
 //
-//  Regular99DelegateBridge.swift
+//  RegularCalendarDelegateBridge.swift
 //  RxCalendarLegacy
 //
 //  Created by Hai Pham on 24/4/18.
@@ -10,29 +10,29 @@ import RxSwift
 import SwiftFP
 
 // MARK: - Delegate bridge.
-extension RxCalendarLegacy.Regular99 {
+extension RxCalendarLegacy.RegularCalendar {
 
-  /// Delegate bridge for Regular99 calendar preset.
+  /// Delegate bridge for RegularCalendar preset.
   final class Bridge {
-    fileprivate weak var calendar: RxRegular99Calendar?
-    fileprivate let delegate: RxRegular99CalendarDelegate?
+    fileprivate weak var calendar: RxRegularCalendar?
+    fileprivate let delegate: RxRegularCalendarDelegate?
     fileprivate let currentMonthSb: BehaviorSubject<Void>
     fileprivate let selectionSb: BehaviorSubject<Void>
 
-    private init(_ delegate: RxRegular99CalendarDelegate) {
+    private init(_ delegate: RxRegularCalendarDelegate) {
       self.delegate = delegate
       currentMonthSb = BehaviorSubject(value: ())
       selectionSb = BehaviorSubject(value: ())
     }
 
-    convenience init(_ calendar: RxRegular99Calendar,
-                     _ delegate: RxRegular99CalendarDelegate) {
+    convenience init(_ calendar: RxRegularCalendar,
+                     _ delegate: RxRegularCalendarDelegate) {
       self.init(Wrapper(delegate))
       self.calendar = calendar
     }
 
-    convenience init(_ calendar: RxRegular99Calendar,
-                     _ delegate: RxRegular99CalendarNoDefaultDelegate) {
+    convenience init(_ calendar: RxRegularCalendar,
+                     _ delegate: RxRegularCalendarNoDefaultDelegate) {
       self.init(DefaultDelegate(delegate))
       self.calendar = calendar
     }
@@ -40,14 +40,14 @@ extension RxCalendarLegacy.Regular99 {
 }
 
 // MARK: - RxGridDisplayFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxGridDisplayFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxGridDisplayFunction {
   var weekdayStacks: Int {
     return calendar.zipWith(delegate, {$1.weekdayStacks(for: $0)}).getOrElse(0)
   }
 }
 
 // MARK: - RxMonthAwareModelFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxMonthAwareModelFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxMonthAwareModelFunction {
   var currentMonthStream: Observable<RxCalendarLogic.Month> {
     return currentMonthSb
       .map({[weak self] in (self?.calendar)
@@ -58,18 +58,18 @@ extension RxCalendarLegacy.Regular99.Bridge: RxMonthAwareModelFunction {
 }
 
 // MARK: - RxMonthControlFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxMonthControlFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxMonthControlFunction {
   var currentMonthReceiver: AnyObserver<RxCalendarLogic.Month> {
     return currentMonthSb.mapObserver({[weak self] month -> Void in
       (self?.calendar).zipWith(self?.delegate, {
-        $1.regular99($0, currentMonthChanged: month)
+        $1.regularCalendar($0, currentMonthChanged: month)
       })
     })
   }
 }
 
 // MARK: - RxMonthControlModelFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxMonthControlModelFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxMonthControlModelFunction {
   var minimumMonth: RxCalendarLogic.Month {
     return calendar
       .zipWith(delegate, {$1.minimumMonth(for: $0)})
@@ -89,20 +89,20 @@ extension RxCalendarLegacy.Regular99.Bridge: RxMonthControlModelFunction {
 }
 
 // MARK: - RxMonthHeaderModelFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxMonthHeaderModelFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxMonthHeaderModelFunction {
   func formatMonthDescription(_ month: RxCalendarLogic.Month) -> String {
     return calendar
-      .zipWith(delegate, {$1.regular99($0, monthDescriptionFor: month)})
+      .zipWith(delegate, {$1.regularCalendar($0, monthDescriptionFor: month)})
       .getOrElse("")
   }
 }
 
 // MARK: - RxMultiDaySelectionFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxMultiDaySelectionFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxMultiDaySelectionFunction {
   var allSelectionReceiver: AnyObserver<Set<RxCalendarLogic.Selection>> {
     return selectionSb.mapObserver({[weak self] selection -> Void in
       (self?.calendar).zipWith(self?.delegate, {
-        $1.regular99($0, selectionChanged: selection)
+        $1.regularCalendar($0, selectionChanged: selection)
       })})
   }
 
@@ -116,7 +116,7 @@ extension RxCalendarLegacy.Regular99.Bridge: RxMultiDaySelectionFunction {
 }
 
 // MARK: - RxMultiMonthGridSelectionCalculator
-extension RxCalendarLegacy.Regular99.Bridge: RxMultiMonthGridSelectionCalculator {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxMultiMonthGridSelectionCalculator {
   func gridSelectionChanges(_ monthComps: [RxCalendarLogic.MonthComp],
                             _ currentMonth: RxCalendarLogic.Month,
                             _ prev: Set<RxCalendarLogic.Selection>,
@@ -125,154 +125,155 @@ extension RxCalendarLegacy.Regular99.Bridge: RxMultiMonthGridSelectionCalculator
   {
     return calendar
       .zipWith(delegate, {
-        $1.regular99($0, gridSelectionChangesFor: monthComps,
-                     whileCurrentMonthIs: currentMonth,
-                     withPreviousSelection: prev,
-                     andCurrentSelection: current)})
+        $1.regularCalendar($0, gridSelectionChangesFor: monthComps,
+                           whileCurrentMonthIs: currentMonth,
+                           withPreviousSelection: prev,
+                           andCurrentSelection: current)})
       .getOrElse([])
   }
 }
 
 // MARK: - RxSelectHighlightFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxSelectHighlightFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxSelectHighlightFunction {
   func highlightPart(_ date: Date) -> RxCalendarLogic.HighlightPart {
     return calendar
-      .zipWith(delegate, {$1.regular99($0, highlightPartFor: date)})
+      .zipWith(delegate, {$1.regularCalendar($0, highlightPartFor: date)})
       .getOrElse(.none)
   }
 }
 
 // MARK: - RxSingleDaySelectionFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxSingleDaySelectionFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxSingleDaySelectionFunction {
   func isDateSelected(_ date: Date) -> Bool {
     return calendar
-      .zipWith(delegate, {$1.regular99($0, isDateSelected: date)})
+      .zipWith(delegate, {$1.regularCalendar($0, isDateSelected: date)})
       .getOrElse(false)
   }
 }
 
 // MARK: - RxWeekdayAwareModelFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxWeekdayAwareModelFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxWeekdayAwareModelFunction {
   var firstWeekday: Int {
     return calendar.zipWith(delegate, {$1.firstWeekday(for: $0)}).getOrElse(1)
   }
 }
 
 // MARK: - RxWeekdayDisplayModelFunction
-extension RxCalendarLegacy.Regular99.Bridge: RxWeekdayDisplayModelFunction {
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxWeekdayDisplayModelFunction {
   func weekdayDescription(_ weekday: Int) -> String {
     return calendar
-      .zipWith(delegate, {$1.regular99($0, weekdayDescriptionFor: weekday)})
+      .zipWith(delegate, {$1.regularCalendar($0, weekdayDescriptionFor: weekday)})
       .getOrElse("")
   }
 }
 
-// MARK: - RxRegular99CalendarModelDependency
-extension RxCalendarLegacy.Regular99.Bridge: RxRegular99CalendarModelDependency {}
+// MARK: - RxRegularCalendarModelDependency
+extension RxCalendarLegacy.RegularCalendar.Bridge: RxRegularCalendarModelDependency {}
 
 // MARK: - Delegate wrapper.
-extension RxCalendarLegacy.Regular99.Bridge {
+extension RxCalendarLegacy.RegularCalendar.Bridge {
 
   /// Wrapper for delegate to store reference weakly. This is because we need
   /// to store a strong reference to the delegate in the bridge class to cater
   /// to default dependencies.
-  final class Wrapper: RxRegular99CalendarDelegate {
-    private weak var delegate: RxRegular99CalendarDelegate?
+  final class Wrapper: RxRegularCalendarDelegate {
+    private weak var delegate: RxRegularCalendarDelegate?
 
-    init(_ delegate: RxRegular99CalendarDelegate) {
+    init(_ delegate: RxRegularCalendarDelegate) {
       self.delegate = delegate
     }
 
     /// Defaultable.
-    func firstWeekday(for calendar: RxRegular99Calendar) -> Int {
+    func firstWeekday(for calendar: RxRegularCalendar) -> Int {
       return delegate?.firstWeekday(for: calendar) ?? 1
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   weekdayDescriptionFor weekday: Int) -> String {
-      return delegate?.regular99(calendar, weekdayDescriptionFor: weekday) ?? ""
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         weekdayDescriptionFor weekday: Int) -> String {
+      return delegate?.regularCalendar(calendar, weekdayDescriptionFor: weekday) ?? ""
     }
 
-    func weekdayStacks(for calendar: RxRegular99Calendar) -> Int {
+    func weekdayStacks(for calendar: RxRegularCalendar) -> Int {
       return delegate?.weekdayStacks(for: calendar) ?? 0
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   monthDescriptionFor month: RxCalendarLogic.Month) -> String {
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         monthDescriptionFor month: RxCalendarLogic.Month) -> String {
       return RxCalendarLogic.Util.defaultMonthDescription(month)
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   gridSelectionChangesFor months: [RxCalendarLogic.MonthComp],
-                   whileCurrentMonthIs month: RxCalendarLogic.Month,
-                   withPreviousSelection prev: Set<RxCalendarLogic.Selection>,
-                   andCurrentSelection current: Set<RxCalendarLogic.Selection>)
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         gridSelectionChangesFor months: [RxCalendarLogic.MonthComp],
+                         whileCurrentMonthIs month: RxCalendarLogic.Month,
+                         withPreviousSelection prev: Set<RxCalendarLogic.Selection>,
+                         andCurrentSelection current: Set<RxCalendarLogic.Selection>)
       -> Set<RxCalendarLogic.GridPosition>
     {
-      return delegate?.regular99(calendar,
-                                 gridSelectionChangesFor: months,
-                                 whileCurrentMonthIs: month,
-                                 withPreviousSelection: prev,
-                                 andCurrentSelection: current) ?? []
+      return delegate?.regularCalendar(calendar,
+                                       gridSelectionChangesFor: months,
+                                       whileCurrentMonthIs: month,
+                                       withPreviousSelection: prev,
+                                       andCurrentSelection: current) ?? []
     }
 
     /// Non-defaultable.
-    func minimumMonth(for calendar: RxRegular99Calendar) -> RxCalendarLogic.Month {
+    func minimumMonth(for calendar: RxRegularCalendar) -> RxCalendarLogic.Month {
       return delegate
         .map({$0.minimumMonth(for: calendar)})
         .getOrElse(RxCalendarLogic.Month(Date()))
     }
 
-    func maximumMonth(for calendar: RxRegular99Calendar) -> RxCalendarLogic.Month {
+    func maximumMonth(for calendar: RxRegularCalendar) -> RxCalendarLogic.Month {
       return delegate
         .map({$0.maximumMonth(for: calendar)})
         .getOrElse(RxCalendarLogic.Month(Date()))
     }
 
-    func initialMonth(for calendar: RxRegular99Calendar) -> RxCalendarLogic.Month {
+    func initialMonth(for calendar: RxRegularCalendar) -> RxCalendarLogic.Month {
       return delegate
         .map({$0.initialMonth(for: calendar)})
         .getOrElse(RxCalendarLogic.Month(Date()))
     }
 
-    func currentMonth(for calendar: RxRegular99Calendar) -> RxCalendarLogic.Month? {
+    func currentMonth(for calendar: RxRegularCalendar) -> RxCalendarLogic.Month? {
       return delegate?.currentMonth(for: calendar)
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   currentMonthChanged month: RxCalendarLogic.Month) {
-      delegate?.regular99(calendar, currentMonthChanged: month)
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         currentMonthChanged month: RxCalendarLogic.Month) {
+      delegate?.regularCalendar(calendar, currentMonthChanged: month)
     }
 
-    func currentSelections(for calendar: RxRegular99Calendar) -> Set<RxCalendarLogic.Selection>? {
+    func currentSelections(for calendar: RxRegularCalendar) -> Set<RxCalendarLogic.Selection>? {
       return delegate?.currentSelections(for: calendar) ?? []
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   selectionChanged selections: Set<RxCalendarLogic.Selection>) {
-      delegate?.regular99(calendar, selectionChanged: selections)
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         selectionChanged selections: Set<RxCalendarLogic.Selection>) {
+      delegate?.regularCalendar(calendar, selectionChanged: selections)
     }
 
-    func regular99(_ calendar: RxRegular99Calendar, isDateSelected date: Date) -> Bool {
-      return delegate?.regular99(calendar, isDateSelected: date) ?? false
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         isDateSelected date: Date) -> Bool {
+      return delegate?.regularCalendar(calendar, isDateSelected: date) ?? false
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   highlightPartFor date: Date) -> RxCalendarLogic.HighlightPart {
-      return delegate?.regular99(calendar, highlightPartFor: date) ?? .none
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         highlightPartFor date: Date) -> RxCalendarLogic.HighlightPart {
+      return delegate?.regularCalendar(calendar, highlightPartFor: date) ?? .none
     }
   }
 }
 
 // MARK: - Default delegate
-extension RxCalendarLegacy.Regular99.Bridge {
+extension RxCalendarLegacy.RegularCalendar.Bridge {
 
   /// This default delegate also includes embedded storage for current month
   /// and selections, all of which are guarded by a lock for concurrent access.
   /// As a result, using these defaults will dramatically reduce the number of
   /// methods to be implemented by a delegate.
-  final class DefaultDelegate: RxRegular99CalendarDelegate {
-    private weak var delegate: RxRegular99CalendarNoDefaultDelegate?
+  final class DefaultDelegate: RxRegularCalendarDelegate {
+    private weak var delegate: RxRegularCalendarNoDefaultDelegate?
     private let highlightCalc: RxCalendarLogic.DateCalc.HighlightPart
     private let lock: NSLock
     private var _currentMonth: RxCalendarLogic.Month?
@@ -288,7 +289,7 @@ extension RxCalendarLegacy.Regular99.Bridge {
       set { lock.lock(); defer { lock.unlock() }; _currentSelections = newValue }
     }
 
-    init(_ delegate: RxRegular99CalendarNoDefaultDelegate) {
+    init(_ delegate: RxRegularCalendarNoDefaultDelegate) {
       self.delegate = delegate
       let weekdayStacks = 6
       let sequentialCalc = RxCalendarLogic.DateCalc.Default(weekdayStacks, 1)
@@ -297,75 +298,76 @@ extension RxCalendarLegacy.Regular99.Bridge {
     }
 
     /// Defaultable.
-    func firstWeekday(for calendar: RxRegular99Calendar) -> Int {
+    func firstWeekday(for calendar: RxRegularCalendar) -> Int {
       return 1
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   weekdayDescriptionFor weekday: Int) -> String {
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         weekdayDescriptionFor weekday: Int) -> String {
       return RxCalendarLogic.Util.defaultWeekdayDescription(weekday)
     }
 
-    func weekdayStacks(for calendar: RxRegular99Calendar) -> Int {
+    func weekdayStacks(for calendar: RxRegularCalendar) -> Int {
       return highlightCalc.weekdayStacks
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   monthDescriptionFor month: RxCalendarLogic.Month) -> String {
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         monthDescriptionFor month: RxCalendarLogic.Month) -> String {
       return RxCalendarLogic.Util.defaultMonthDescription(month)
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   gridSelectionChangesFor months: [RxCalendarLogic.MonthComp],
-                   whileCurrentMonthIs month: RxCalendarLogic.Month,
-                   withPreviousSelection prev: Set<RxCalendarLogic.Selection>,
-                   andCurrentSelection current: Set<RxCalendarLogic.Selection>)
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         gridSelectionChangesFor months: [RxCalendarLogic.MonthComp],
+                         whileCurrentMonthIs month: RxCalendarLogic.Month,
+                         withPreviousSelection prev: Set<RxCalendarLogic.Selection>,
+                         andCurrentSelection current: Set<RxCalendarLogic.Selection>)
       -> Set<RxCalendarLogic.GridPosition>
     {
       return highlightCalc.gridSelectionChanges(months, month, prev, current)
     }
 
     /// Non-defaultable.
-    func minimumMonth(for calendar: RxRegular99Calendar) -> RxCalendarLogic.Month {
+    func minimumMonth(for calendar: RxRegularCalendar) -> RxCalendarLogic.Month {
       return delegate?.minimumMonth(for: calendar) ?? RxCalendarLogic.Month(Date())
     }
 
-    func maximumMonth(for calendar: RxRegular99Calendar) -> RxCalendarLogic.Month {
+    func maximumMonth(for calendar: RxRegularCalendar) -> RxCalendarLogic.Month {
       return delegate?.maximumMonth(for: calendar) ?? RxCalendarLogic.Month(Date())
     }
 
-    func initialMonth(for calendar: RxRegular99Calendar) -> RxCalendarLogic.Month {
+    func initialMonth(for calendar: RxRegularCalendar) -> RxCalendarLogic.Month {
       return delegate?.initialMonth(for: calendar) ?? RxCalendarLogic.Month(Date())
     }
 
-    func currentMonth(for calendar: RxRegular99Calendar) -> RxCalendarLogic.Month? {
+    func currentMonth(for calendar: RxRegularCalendar) -> RxCalendarLogic.Month? {
       return currentMonth
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   currentMonthChanged month: RxCalendarLogic.Month) {
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         currentMonthChanged month: RxCalendarLogic.Month) {
       currentMonth = month
-      delegate?.regular99(calendar, currentMonthChanged: month)
+      delegate?.regularCalendar(calendar, currentMonthChanged: month)
     }
 
-    func currentSelections(for calendar: RxRegular99Calendar) -> Set<RxCalendarLogic.Selection>? {
+    func currentSelections(for calendar: RxRegularCalendar) -> Set<RxCalendarLogic.Selection>? {
       return currentSelections
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   selectionChanged selections: Set<RxCalendarLogic.Selection>) {
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         selectionChanged selections: Set<RxCalendarLogic.Selection>) {
       currentSelections = selections
-      delegate?.regular99(calendar, selectionChanged: selections)
+      delegate?.regularCalendar(calendar, selectionChanged: selections)
     }
 
-    func regular99(_ calendar: RxRegular99Calendar, isDateSelected date: Date) -> Bool {
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         isDateSelected date: Date) -> Bool {
       return currentSelections
         .map({$0.contains(where: {$0.contains(date)})})
         .getOrElse(false)
     }
 
-    func regular99(_ calendar: RxRegular99Calendar,
-                   highlightPartFor date: Date) -> RxCalendarLogic.HighlightPart {
+    func regularCalendar(_ calendar: RxRegularCalendar,
+                         highlightPartFor date: Date) -> RxCalendarLogic.HighlightPart {
       return currentSelections
         .map({RxCalendarLogic.Util.highlightPart($0, date)})
         .getOrElse(.none)
@@ -374,9 +376,9 @@ extension RxCalendarLegacy.Regular99.Bridge {
 }
 
 // MARK: - Delegate bridge
-public extension RxRegular99Calendar {
-  public typealias NoDefaultDelegate = RxRegular99CalendarNoDefaultDelegate
-  public typealias Delegate = RxRegular99CalendarDelegate
+public extension RxRegularCalendar {
+  public typealias NoDefaultDelegate = RxRegularCalendarNoDefaultDelegate
+  public typealias Delegate = RxRegularCalendarDelegate
   public typealias NoDefaultLegacyDependency = (NoDefaultDelegate, Decorator)
   public typealias LegacyDependency = (Delegate, Decorator)
 
@@ -393,9 +395,9 @@ public extension RxRegular99Calendar {
         #endif
       }
 
-      let modelDp = RxCalendarLegacy.Regular99.Bridge(self, newValue.0)
-      let model = RxCalendarPreset.Regular99.Model(modelDp)
-      let viewModel = RxCalendarPreset.Regular99.ViewModel(model)
+      let modelDp = RxCalendarLegacy.RegularCalendar.Bridge(self, newValue.0)
+      let model = RxCalendarPreset.RegularCalendar.Model(modelDp)
+      let viewModel = RxCalendarPreset.RegularCalendar.ViewModel(model)
       dependency = (viewModel, newValue.1)
     }
   }
@@ -414,9 +416,9 @@ public extension RxRegular99Calendar {
         #endif
       }
 
-      let modelDp = RxCalendarLegacy.Regular99.Bridge(self, newValue.0)
-      let model = RxCalendarPreset.Regular99.Model(modelDp)
-      let viewModel = RxCalendarPreset.Regular99.ViewModel(model)
+      let modelDp = RxCalendarLegacy.RegularCalendar.Bridge(self, newValue.0)
+      let model = RxCalendarPreset.RegularCalendar.Model(modelDp)
+      let viewModel = RxCalendarPreset.RegularCalendar.ViewModel(model)
       dependency = (viewModel, newValue.1)
     }
   }

@@ -9,6 +9,7 @@
 /// Entry points for presets.
 public final class RxCalendarPreset {
 
-  /// Regular calendar views frequently used in 99 apps.
-  public final class Regular99 {}
+  /// Regular calendar view that sports a horizontal layout, selectable weekday
+  /// view and controllable month header.
+  public final class RegularCalendar {}
 }
