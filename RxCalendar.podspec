@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.name = "RxCalendar"
   s.summary = "Rx-driven calendar view for iOS/OSX applications."
   s.requires_arc = true
-  s.version = "1.0.1"
+  s.version = "1.0.2"
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author = { "Hai Pham" => "swiften.svc@gmail.com" }
   s.homepage = "https://github.com/protoman92/RxCalendar-Swift.git"

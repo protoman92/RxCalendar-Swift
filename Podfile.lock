@@ -1,9 +1,9 @@
 PODS:
   - Differentiator (3.0.2)
-  - "HMReactiveRedux/Main+Rx (1.0.0)":
+  - "HMReactiveRedux/Main+Rx (1.0.1)":
     - RxSwift (~> 4.0)
     - SwiftFP/Main
-  - InterfaceUtilities/Main (1.0.1)
+  - InterfaceUtilities/Main (1.0.2)
   - RxBlocking (4.1.2):
     - RxSwift (~> 4.0)
   - RxCocoa (4.1.2):
@@ -62,25 +62,25 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   HMReactiveRedux:
-    :commit: 1d4afd38f4ec1f9d8e7a56ea1622c4d02a1c1fae
+    :commit: cd1aa2fb4e2128fc6a90c70d9d85088b8ee7de7a
     :git: https://github.com/protoman92/HMReactiveRedux-Swift.git
   InterfaceUtilities:
-    :commit: 62d3cdbdc510c99a10c12309f26de73ec5069587
+    :commit: 61e3fe8e5d9a4821f32aa9da698422d34ed2d12b
     :git: https://github.com/protoman92/InterfaceUtilities-Swift.git
   SwiftFP:
     :commit: eb32feb8cfb44c2d69431ec4cae455daf73339a7
     :git: https://github.com/protoman92/SwiftFP.git
   SwiftUtilities:
-    :commit: 7a3e200e71ec3048177eced1e5eb1d201c9e2502
+    :commit: e61bd899f82d46d8cf0c01f09d3a0723fe34594a
     :git: https://github.com/protoman92/SwiftUtilities.git
   SwiftUtilitiesTests:
-    :commit: 7a3e200e71ec3048177eced1e5eb1d201c9e2502
+    :commit: e61bd899f82d46d8cf0c01f09d3a0723fe34594a
     :git: https://github.com/protoman92/SwiftUtilities.git
 
 SPEC CHECKSUMS:
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
-  HMReactiveRedux: 7b00f39a5b3432ad2f1e2cb7c96e2e1f1ac363da
-  InterfaceUtilities: 04992c3f7473c90d2b98d587c5268330ef71aff1
+  HMReactiveRedux: 00de9c305340c4fd1021a15da79b942cc612da0e
+  InterfaceUtilities: 03a0a814238ae9eb44c7287fd56e52920923ed1b
   RxBlocking: f6054985901412fc8c02daa84e92d4ba68c61389
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
